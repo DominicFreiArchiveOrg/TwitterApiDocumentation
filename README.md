@@ -49,10 +49,16 @@ Path: ```/users/:username/tweets```
 
 Path Parameters:
 
-- None
+- username:
+  - The Twitter handle of the user you want to query, e.g. @dominicfrei
 
 Query Parameters:
 
+- ```sorted_by```
+    - The field to sort by. This can be any field that's part of the tweet, e.g. 'date', 'viewCount', etc.
+    - Optional
+    - Type: string
+    - Default: 'date'
 - ```max_results```
     - The maximum amount of results returned.
     - Optional
@@ -65,7 +71,7 @@ Data / Body:
 
 Example:
 
-```http://twitterapi-env.eba-tmjmxmmh.ap-northeast-1.elasticbeanstalk.com/users/dominicfrei/tweets?max_results=1```
+```http://twitterapi-env.eba-tmjmxmmh.ap-northeast-1.elasticbeanstalk.com/users/dominicfrei/tweets?max_results=1&sorted_by=viewCount```
 
 This returns the latest tweets for a specified user.
 
