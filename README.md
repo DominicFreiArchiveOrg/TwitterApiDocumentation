@@ -25,6 +25,12 @@ Query Parameters:
   - Mandatory
   - Type: string
 
+- ```sorted_by```
+    - The field to sort by. This can be any field that's part of the tweet, e.g. 'date', 'viewCount', etc.
+    - Optional
+    - Type: string
+    - Default: 'date'
+
 - ```max_results```
   - The maximum amount of results returned.
   - Optional
@@ -37,7 +43,7 @@ Data / Body:
 
 Example:
 
-```http://twitterapi-env.eba-tmjmxmmh.ap-northeast-1.elasticbeanstalk.com/tweets/search/recent?query=%28from%3Adominicfrei%29%20-filter%3Areplies&max_results=5```
+```http://twitterapi-env.eba-tmjmxmmh.ap-northeast-1.elasticbeanstalk.com/tweets/search/recent?query=%28from%3Adominicfrei%29%20-filter%3Areplies&sorted_by=viewCount&max_results=5```
 
 This is the equivalent to searching ```(from:dominicfrei) -filter:replies``` on ```https://twitter.com/search```, specifically: ```https://twitter.com/search?q=(from%3Adominicfrei)%20-filter%3Areplies```
 
@@ -59,6 +65,7 @@ Query Parameters:
     - Optional
     - Type: string
     - Default: 'date'
+
 - ```max_results```
     - The maximum amount of results returned.
     - Optional
@@ -71,7 +78,7 @@ Data / Body:
 
 Example:
 
-```http://twitterapi-env.eba-tmjmxmmh.ap-northeast-1.elasticbeanstalk.com/users/dominicfrei/tweets?max_results=1&sorted_by=viewCount```
+```http://twitterapi-env.eba-tmjmxmmh.ap-northeast-1.elasticbeanstalk.com/users/dominicfrei/tweets?sorted_by=viewCount&max_results=3```
 
 This returns the latest tweets for a specified user.
 
