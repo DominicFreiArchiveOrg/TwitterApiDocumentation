@@ -148,3 +148,44 @@ Example Response:
   "viewCount": 565
 }
 ```
+
+### Users
+
+Method: ```GET```
+
+Path: ```/users/:username```
+
+Path Parameters:
+
+- username:
+  - The Twitter handle of the user you want to query, e.g. @dominicfrei
+
+Query Parameters:
+
+- None
+
+Data / Body:
+
+- None
+
+Example:
+
+```http://twitterapi-env.eba-tmjmxmmh.ap-northeast-1.elasticbeanstalk.com/users/dominicfrei```
+
+Example Response:
+
+```
+{
+  "created": "2011-04-16 11:16:10",
+  "displayName": "Dominic Frei \ud83d\ude80 www.grittr.app",
+  "followerCount": 834,
+  "followingCount": 158,
+  "id": 283004207,
+  "profileBannerUrl": "https://pbs.twimg.com/profile_banners/283004207/1679880618",
+  "profileImageUrl": "https://pbs.twimg.com/profile_images/1321489002759946240/J2aAULS-_normal.jpg",
+  "rawDescription": "!!! https://t.co/sgY6fVDKq6 !!! 20+ years Software Engineer & Developer Advocate @MongoDB Ask me about coding, programming, AI, Twitter, entrepreneurship.",
+  "renderedDescription": "!!! GrittR.app !!! 20+ years Software Engineer & Developer Advocate @MongoDB Ask me about coding, programming, AI, Twitter, entrepreneurship.",
+  "tweetCount": 10529,
+  "username": "dominicfrei"
+}
+```
