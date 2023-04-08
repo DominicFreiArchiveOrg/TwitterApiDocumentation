@@ -47,6 +47,38 @@ Example:
 
 This is the equivalent to searching ```(from:dominicfrei) -filter:replies``` on ```https://twitter.com/search```, specifically: ```https://twitter.com/search?q=(from%3Adominicfrei)%20-filter%3Areplies```
 
+Example Response:
+
+```
+{
+  "conversationId": 1644397705605656576,
+  "date": "2023-04-07 17:52:19",
+  "id": 1644397705605656576,
+  "inReplyToTweetId": null,
+  "inReplyToUser": null,
+  "likeCount": 11,
+  "quoteCount": 0,
+  "rawContent": "As a human, what is your favorite breakfast?",
+  "renderedContent": "As a human, what is your favorite breakfast?",
+  "replyCount": 12,
+  "retweetCount": 1,
+  "user": {
+    "created": "2011-04-16 11:16:10",
+    "displayName": "Dominic Frei \ud83d\ude80 www.grittr.app",
+    "followerCount": 834,
+    "followingCount": 158,
+    "id": 283004207,
+    "profileBannerUrl": "https://pbs.twimg.com/profile_banners/283004207/1679880618",
+    "profileImageUrl": "https://pbs.twimg.com/profile_images/1321489002759946240/J2aAULS-_normal.jpg",
+    "rawDescription": "!!! https://t.co/sgY6fVDKq6 !!! 20+ years Software Engineer & Developer Advocate @MongoDB Ask me about coding, programming, AI, Twitter, entrepreneurship.",
+    "renderedDescription": "!!! GrittR.app !!! 20+ years Software Engineer & Developer Advocate @MongoDB Ask me about coding, programming, AI, Twitter, entrepreneurship.",
+    "tweetCount": 10528,
+    "username": "dominicfrei"
+  },
+  "viewCount": 565
+}
+```
+
 ### Tweets
 
 Method: ```GET```
@@ -84,3 +116,35 @@ This returns the latest tweets for a specified user.
 
 Note: This is basically just a shortcut to the ```GET /tweets/search/recent``` endpoint where the ```:username``` will be used to form a search query like this:
 ```(from:username) -filter:replies```.
+
+Example Response:
+
+```
+{
+  "conversationId": 1644397705605656576,
+  "date": "2023-04-07 17:52:19",
+  "id": 1644397705605656576,
+  "inReplyToTweetId": null,
+  "inReplyToUser": null,
+  "likeCount": 11,
+  "quoteCount": 0,
+  "rawContent": "As a human, what is your favorite breakfast?",
+  "renderedContent": "As a human, what is your favorite breakfast?",
+  "replyCount": 12,
+  "retweetCount": 1,
+  "user": {
+    "created": "2011-04-16 11:16:10",
+    "displayName": "Dominic Frei \ud83d\ude80 www.grittr.app",
+    "followerCount": 834,
+    "followingCount": 158,
+    "id": 283004207,
+    "profileBannerUrl": "https://pbs.twimg.com/profile_banners/283004207/1679880618",
+    "profileImageUrl": "https://pbs.twimg.com/profile_images/1321489002759946240/J2aAULS-_normal.jpg",
+    "rawDescription": "!!! https://t.co/sgY6fVDKq6 !!! 20+ years Software Engineer & Developer Advocate @MongoDB Ask me about coding, programming, AI, Twitter, entrepreneurship.",
+    "renderedDescription": "!!! GrittR.app !!! 20+ years Software Engineer & Developer Advocate @MongoDB Ask me about coding, programming, AI, Twitter, entrepreneurship.",
+    "tweetCount": 10528,
+    "username": "dominicfrei"
+  },
+  "viewCount": 565
+}
+```
